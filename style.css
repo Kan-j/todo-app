@@ -1,0 +1,351 @@
+
+/*=====================  IMPORTING FONTS BEGINNING ==========================*/
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Bold.ttf');
+    font-weight: 700;
+}
+
+/*=====================  IMPORTING FONTS ENDING ==========================*/
+
+
+
+/*=====================  GENERAL STYLING BEGINNING ==========================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=====================  GENERAL STYLING ENDING ==========================*/
+
+
+
+/*=====================  BODY STYLING BEGINNING ==========================*/
+body{
+    font-size: 18px;
+    font-family: 'Josefin Sans',sans-serif;
+    background: hsl(0, 0%, 98%);
+
+}
+/*=====================  BODY STYLING ENDING ==========================*/
+
+
+
+/*=====================  THE BACKGROUND IMAGE STYLING BEGINNING ==========================*/
+.background-top{
+    position: fixed;
+    z-index: -1;
+    height: 40vh;  
+    background-size: cover;
+    width: 100vw;
+}
+
+.light-mode{
+    background-image: url('images/bg-desktop-light.jpg');
+}
+
+.dark-mode{
+    background-image: url('images/bg-desktop-dark.jpg');
+}
+/*=====================  THE BACKGROUND IMAGE STYLING ENDING ==========================*/
+
+.sun{
+    display: none;
+}
+
+.light-mode__background{
+    background-color: #fff;
+}
+
+.dark-mode__background{
+    background-color: hsl(235, 21%, 11%);
+}
+
+
+
+.main-body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.todo-MainBody{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* position: absolute;
+    background: transparent;
+    padding: 3rem;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    min-width: 700px;
+    z-index: 100;
+}
+
+/* DIV FOR THE TODO AND THEME SWITCHER */
+.todo-Heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.todo-head{
+    letter-spacing: 1rem;
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.theme-switcher >img{
+    width: 2.1rem;
+}
+
+
+.todo-li{
+    color: hsl(235, 19%, 35%);
+}
+
+/*ending  DIV FOR THE TODO AND THEME SWITCHER */
+/* /////////////////////////////////////////////////////////// */
+
+.todo-input-Div{
+    background: #fff;
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.todo-input{
+    flex: 1;
+    padding: 0.2rem;
+    font-size: 18px;
+    border: none;
+    color: hsl(235, 19%, 35%);
+    font-family: 'Josefin Sans',sans-serif;
+    align-items: center;
+    
+}
+
+.todo-input:focus{
+    outline: none;
+
+}
+
+
+
+.input-container{
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox css */
+
+.check-input {
+    display: none;
+}
+.checkbox {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 1px solid hsl(236, 9%, 61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px;
+    transition: 0.3s all;
+}
+.checkbox svg {
+    width: 20px;
+    height: 20px;
+}
+.check-input:checked + .checkbox {
+    background-image: linear-gradient(160deg,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+    border: none;
+}
+.check-input:checked + .checkbox svg path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    stroke: #fff;
+    stroke-width: 3;
+    animation: check 4s forwards;
+}
+.checkbox::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #2584ff66;
+    z-index: -1;
+}
+.check-input:checked + .checkbox::before {
+    animation: ripple 0.3s;
+}
+@keyframes check {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes ripple {
+    to {
+        transform: scale(1);
+    }
+}
+
+.cross{
+    height: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////  */
+
+.light-theme-shadow{
+
+}
+
+.dark-theme-shadow{
+
+}
+
+
+.todo-container{
+    /* background: #000; */
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 9px 6px hsl(236, 9%, 61%);
+    border-top: 1px solid hsl(233, 11%, 84%);
+}
+
+.todo-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    /* background: hsl(0, 0%, 98%); */
+    color: hsl(236, 9%, 61%);
+    padding: 1.2rem;
+    border-radius: 0  0 0.3rem 0.3rem;
+}
+
+.items-categories{
+    min-width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.outside-footer{
+    display: none;
+}
+
+
+
+.todo-item-div{
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 1.2rem ;
+    border-bottom: 2px solid hsl(233, 11%, 84%);
+    /* cursor: move; */
+}
+
+.light-mode-main__background{
+    background-color: hsl(0, 0%, 98%);
+}
+
+.dark-mode-main__background{
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-item-div .input-check{
+    margin-right: 0.8rem;
+
+}
+
+.todo-li{
+    flex: 1;
+    list-style:  none;
+    margin: 0;
+}
+
+.todo-item-div:nth-of-type(1){
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+
+
+.theme-switcher{
+    cursor: pointer;
+}
+
+
+@media (max-width: 759px) {
+    .todo-MainBody{
+        max-width: 900px;
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .todo-MainBody{
+        max-width: 900px;
+        min-width: 400px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .todo-MainBody{
+        max-width: 900px;
+        min-width: 320px;
+    }
+
+    .todo-head{
+        letter-spacing: 1rem;
+        color: hsl(0, 0%, 98%);
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .in-footer{
+        display: none;
+    }
+
+    .outside-footer{
+        display: flex;
+        margin-top: 30px;
+        background: #fff;
+        padding: 0.5rem;
+        font-size: 15px;
+        border-radius: 0.3rem;
+        color: hsl(236, 9%, 61%);
+        box-shadow: 0px 0px 1px 1px hsl(236, 9%, 61%);
+    }
+    .theme-switcher >img{
+        width: 1.5rem;
+    }
+
+    .input-container{
+        margin-right: 0.8rem;
+        display: flex;
+        align-items: center;
+    }
+}

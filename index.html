@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do App</title>
+</head>
+<body class="light-mode__background">
+    <div class="background-top light-mode">
+    </div>
+    <main class="main-body ">
+        <article class="todo-MainBody">
+            <div class="todo-Heading">
+                <h1 class="todo-head">TODO</h1>
+                <div class="theme-switcher">
+                    <img src="./images/icon-moon.svg" alt="" class="theme-svg moon">
+                    <img src="./images/icon-sun.svg" alt="" class="theme-svg sun">
+                </div>
+            </div>
+
+            <div class="todo-input-Div light-mode-main__background">
+                <div class="input-container">
+                    <input type="checkbox" id="input-2" class="check-input" />
+                    <label for="input-2" class="checkbox">
+                        <svg viewBox="0 0 22 16" fill="none">
+                            <path d="M1 6.85L8.09677 14L21 1" />
+                        </svg>
+                    </label>
+                </div>
+                <!-- <input type="checkbox" name="" id="" class="todo-checkbox"> -->
+                <input type="text" name="todo-input" class="todo-input light-mode__background" placeholder="Create a new task">
+            </div>
+            
+
+            <div class="todo-container">
+                <ul class="todo-list" id="sortablelist">
+                    <div class="todo-item-div light-mode-main__background"  >
+                        <div class="input-container">
+                            <input type="checkbox" id="input-3" class="check-input" />
+                            <label for="input-3" class="checkbox">
+                                <svg viewBox="0 0 22 16" fill="none">
+                                    <path d="M1 6.85L8.09677 14L21 1" />
+                                </svg>
+                            </label>
+                        </div>
+                        <!-- <input type="checkbox" name="" id="" class="input-check"> -->
+                        <li class="todo-li">Hi Kwasi</li>
+                        <img src="./images/icon-cross.svg" alt="" class="cross">
+                    </div>
+
+
+                </ul>
+
+
+                <footer class="todo-footer light-mode-main__background">
+                    <p class="items-left">5 items left</p>
+                    <div class="items-categories in-footer">
+                        <p class="all">All</p>
+                        <p class="active">Active</p>
+                        <p class="completed">Completed</p>
+                    </div>
+                    <p class="clear-list">Clear Completed</p>
+                </footer>
+
+                
+            </div>
+            <div class="items-categories outside-footer">
+                <p class="all">All</p>
+                <p class="active">Active</p>
+                <p class="completed">Completed</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
